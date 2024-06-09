@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="rule"
+            type="com.example.prizprojem.data.model.Rule" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ruleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Kuralım"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtDegreeOrText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@id/ruleName"
+            app:layout_constraintStart_toStartOf="@id/ruleName"
+            app:layout_constraintTop_toBottomOf="@id/ruleName" />
+
+        <TextView
+            android:id="@+id/txtClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@id/txtDegreeOrText"
+            app:layout_constraintStart_toStartOf="@id/txtDegreeOrText"
+            app:layout_constraintTop_toBottomOf="@id/txtDegreeOrText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Kuralı Sil:"
+            android:textColor="@color/black"
+            app:icon="@drawable/delete_icon"
+            app:iconGravity="end"
+            app:iconTint="#FF0000"
+            app:layout_constraintEnd_toEndOf="@id/txtClock"
+            app:layout_constraintStart_toStartOf="@id/txtClock"
+            app:layout_constraintTop_toBottomOf="@id/txtClock"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

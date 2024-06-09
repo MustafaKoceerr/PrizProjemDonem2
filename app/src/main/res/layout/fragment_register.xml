@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentmain.RegisterFragment">
+
+
+    <TextView
+        android:id="@+id/tvHesapOlustur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/thebomb"
+        android:text="Hesap Olustur"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/txtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/custom_edit_text"
+        android:drawableStart="@drawable/custom_username_icon"
+        android:drawablePadding="12dp"
+        android:hint="Kullanıcı Adı"
+        android:minHeight="48dp"
+
+        app:layout_constraintEnd_toEndOf="@id/tvHesapOlustur"
+        app:layout_constraintStart_toStartOf="@id/tvHesapOlustur"
+        app:layout_constraintTop_toBottomOf="@id/tvHesapOlustur" />
+
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_edit_text"
+        android:drawableStart="@drawable/custom_password_icon"
+        android:drawablePadding="12dp"
+        android:hint="Parola"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+
+        app:layout_constraintEnd_toEndOf="@id/txtUsername"
+        app:layout_constraintStart_toStartOf="@id/txtUsername"
+        app:layout_constraintTop_toBottomOf="@id/txtUsername" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autotxtCity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:focusable="true"
+        android:hint="Şehir seciniz"
+        android:background="@drawable/custom_edit_text"
+
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@id/txtPassword"
+
+        app:layout_constraintStart_toStartOf="@id/txtPassword"
+        app:layout_constraintTop_toBottomOf="@id/txtPassword" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autotxtProvince"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:dropDownSelector="@android:color/holo_blue_dark"
+        android:focusable="false"
+        android:hint="İlce seciniz"
+        android:background="@drawable/custom_edit_text"
+
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        android:visibility="invisible"
+
+        app:layout_constraintEnd_toEndOf="@id/autotxtCity"
+        app:layout_constraintStart_toStartOf="@id/autotxtCity"
+        app:layout_constraintTop_toBottomOf="@id/autotxtCity"
+
+        />
+
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Kayıt Ol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/autotxtProvince" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
